@@ -30,6 +30,9 @@ borderWidth             = 2px
 tabBorder               = lightBurgundy
 tabBackground           = lightTan
 tabText                 = lightBurgundy
+gameRowBackground = salmon
+gameRowText = lightBurgundy
+gameRowBorder = lightBurgundy
 
 //Font setup
 largestText = 72px
@@ -97,6 +100,9 @@ hr
   border none
   margin-bottom 40px
 
+a
+  cursor pointer
+
 ////////////////////////////////////////////////////////////////////////////////
 // Debugging / Errors
 ////////////////////////////////////////////////////////////////////////////////
@@ -127,7 +133,32 @@ header
     margin 0 10px
     text-decoration none
     color inherit
+
+////////////////////////////////////////////////////////////////////////////////
+// Tables (Game Browser)
+////////////////////////////////////////////////////////////////////////////////
+
+table, tbody
+  border none
+  display block
+
+  tr
+    display grid
+    grid-template-columns 25% 25% 10% 10% 10% 20%
+    border solid transparent
+
+    td, th
+      text-align left
+
+  tr:nth-child(even)
+    background gameRowBackground
+    color gameRowText
+
+  .clickable-row
     cursor pointer
+
+  .clickable-row:hover
+    border solid gameRowBorder
 
 ////////////////////////////////////////////////////////////////////////////////
 // Ribbons

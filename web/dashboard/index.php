@@ -2,7 +2,7 @@
 require_once '/var/www/pop/web/assets/autoload.php';
 
 if (!$isLoggedIn)
-  $UserSystem->redirect301('/user/login?mustBeLoggedIn')
+  $UserSystem->redirect301('/user/login?mustBeLoggedIn');
 ?>
 
 <div class="ribbon">
