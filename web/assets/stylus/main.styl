@@ -27,17 +27,28 @@ inputBorder             = lightBurgundy
 inputText               = lightBurgundy
 horizontalRuling        = lightBurgundy
 borderWidth             = 2px
+tabBorder               = lightBurgundy
+tabBackground           = lightTan
+tabText                 = lightBurgundy
 
 //Font setup
 largestText = 72px
 bigText     = 50px
 text        = 40px
 smallText   = 30px
+
+////////////////////////////////////////////////////////////////////////////////
+// Functions
+////////////////////////////////////////////////////////////////////////////////
+
 font()
   font-family 'Tangerine', cursive
   font-size arguments
   font-weight bold
   line-height 2
+
+border()
+  border borderWidth arguments
 
 ////////////////////////////////////////////////////////////////////////////////
 // Overarching
@@ -184,7 +195,7 @@ form
 label
   background inputBackground
   color inputText
-  border borderWidth solid inputBorder
+  border solid inputBorder
   font-size text
   display inline-grid
   grid-template-columns auto 60%
@@ -199,3 +210,47 @@ input[type=text], input[type=email], input[type=password]
   border-left borderWidth solid inputBorder
   padding 0 10px
   margin-left 10px
+
+////////////////////////////////////////////////////////////////////////////////
+// Data tabs
+////////////////////////////////////////////////////////////////////////////////
+
+.tabHolder
+  display grid
+  grid-template-columns auto 10% auto
+  background salmon !important
+  width 60%
+  margin auto
+  padding-top 40px !important
+
+  .deadSpace
+    background salmon !important
+
+  .tab
+    border solid tabBorder
+    background tabBackground
+    color tabText
+    display inline-grid
+    grid-template-columns auto
+    padding 0 !important
+    margin-bottom 40px
+    text-decoration none
+
+    .header
+      border-bottom borderWidth solid tabBorder
+      margin-bottom 10px
+      padding 0 10px
+
+    .content
+      padding 0 10px
+      display grid
+      grid-template-columns auto auto
+      maring 0
+
+      div
+        display inline-block
+        padding 0 5px
+        height auto
+
+    .content.one
+      grid-template-columns auto
