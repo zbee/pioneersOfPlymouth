@@ -63,12 +63,10 @@ PleaseActivate;
         Username
         <input type="text" name="user">
       </label>
-      <br>
       <label>
         Password
         <input type="password" name="pass">
       </label>
-      <br>
       <input type="submit" class="button" value="Login!">
       <br>
       <a href="../recover" class="smallText">Forgot?</a>

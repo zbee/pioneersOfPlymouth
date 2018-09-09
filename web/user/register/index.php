@@ -67,12 +67,10 @@ Error;
         Username
         <input type="text" name="user">
       </label>
-      <br>
       <label>
         Alias
         <input type="text" name="alias">
       </label>
-      <br>
       <label>
         Email
         <input type="text" name="mail">
@@ -82,12 +80,10 @@ Error;
         Password
         <input type="password" name="pass">
       </label>
-      <br>
       <label>
         Confirm
         <input type="password" name="conf">
       </label>
-      <br>
       <input type="submit" class="button" value="Register!">
     </form>
   </div>
