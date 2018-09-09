@@ -151,6 +151,9 @@ class UserSystem extends UserUtils {
 
          $identifier = $this->dbIns(["users", $data]);
 
+         if ($identifier !== 1)
+           return "queryFailed";
+
          $blob = $this->insertUserBlob($identifier, "activate");
          $link = $this->sanitize(
            URL_PREFACE."://".DOMAIN."/".ACTIVATE_PG."/?blob=$blob",
@@ -171,7 +174,7 @@ class UserSystem extends UserUtils {
            Thank you"
          );
 
-         return (int) $identifier;
+         return $identifier;
        } else {
          return "email";
        }

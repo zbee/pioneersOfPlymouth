@@ -28,7 +28,7 @@ if (
   if (empty($error))
     $register = $UserSystem->addUser($user, $pass, $mail);
 
-  if (is_int($register))
+  if ($register === 1)
     $UserSystem->redirect301("/user/login?registered");
   else
     $error = $register;

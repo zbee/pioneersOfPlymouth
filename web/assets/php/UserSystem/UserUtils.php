@@ -196,4 +196,32 @@ class UserUtils extends Database {
     }
     return "email";
   }
+
+  /**
+   * Allows the converting of the raw binary of a UUID back into a UUID
+   *
+   * @param $id
+   * @return null|string|string[]
+   */
+  public function binary2UUID($id)
+  {
+    return preg_replace(
+      "/(\w{8})(\w{4})(\w{4})(\w{4})(\w{12})/i",
+      "$1-$2-$3-$4-$5",
+      bin2hex($id)
+    );
+  }
+
+  /**
+   * Inverse of binary2UUID, converts a UUID back to binary for lookups
+   *
+   * @param $id
+   * @return string
+   */
+  public function uuid2Binary($id)
+  {
+    return hex2bin(
+      str_replace('-', '', $id)
+    );
+  }
 }

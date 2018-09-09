@@ -63,9 +63,9 @@ class Database extends Utils {
     $stmt = $this->DATABASE->prepare("
       INSERT INTO $data[0] ($cols) VALUES ($entries)
     ");
-    $stmt = $stmt->execute($enArr);
+    $stmt->execute($enArr);
 
-    if ($stmt) return $this->DATABASE->lastInsertId();
+    if ($stmt) return $stmt->rowCount();
     return false;
   }
 
