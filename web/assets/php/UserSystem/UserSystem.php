@@ -171,7 +171,7 @@ class UserSystem extends UserUtils {
            Thank you"
          );
 
-         return $identifier;
+         return (int) $identifier;
        } else {
          return "email";
        }
