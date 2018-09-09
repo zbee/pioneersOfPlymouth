@@ -1,0 +1,201 @@
+////////////////////////////////////////////////////////////////////////////////
+// Font import
+////////////////////////////////////////////////////////////////////////////////
+@import url('https://fonts.googleapis.com/css?family=Tangerine')
+
+////////////////////////////////////////////////////////////////////////////////
+// Variables
+////////////////////////////////////////////////////////////////////////////////
+//Tan setup
+lightTan      = rgb(238, 226, 220)
+salmon        = rgb(237, 199, 183)
+lightBurgundy = rgb(172, 59, 97)
+black         = rgb(0, 0, 0)
+
+//Master colors
+navigationBackground    = lightTan
+navigationText          = black
+navigationSeperator     = black
+ribbonBackground        = salmon
+ribbonText              = lightBurgundy
+ribbonSectionBackground = lightTan
+ribbonSectionText       = black
+buttonBackground        = lightBurgundy
+buttonText              = lightTan
+inputBackground         = lightTan
+inputBorder             = lightBurgundy
+inputText               = lightBurgundy
+horizontalRuling        = lightBurgundy
+borderWidth             = 2px
+
+//Font setup
+largestText = 72px
+bigText     = 50px
+text        = 40px
+smallText   = 30px
+font()
+  font-family 'Tangerine', cursive
+  font-size arguments
+  font-weight bold
+  line-height 2
+
+////////////////////////////////////////////////////////////////////////////////
+// Overarching
+////////////////////////////////////////////////////////////////////////////////
+html, body
+  font text
+  margin 0
+  padding 0
+
+.largestText
+  font-size largestText !important
+
+.bigText
+  font-size bigText !important
+
+.smallerText
+  font-size text !important
+
+.smallText
+  font-size smallText !important
+
+.right
+  float right
+
+h1
+  font-size largestText
+  margin 0
+  padding 0
+
+h2, h3
+  font-size bigText
+  margin 0
+  padding 0
+
+h4, h5, h6
+  font-size text
+  margin 0
+  padding 0
+
+hr
+  background horizontalRuling
+  height borderWidth
+  width 100%
+  margin 0
+  padding 0
+  border none
+  margin-bottom 40px
+
+////////////////////////////////////////////////////////////////////////////////
+// Debugging / Errors
+////////////////////////////////////////////////////////////////////////////////
+
+//XDebug
+font
+  font-family Monospaced
+  font-size 20px !important
+
+.error
+  background ribbonSectionBackground
+  padding 20px
+  margin-bottom 40px
+
+////////////////////////////////////////////////////////////////////////////////
+// Navigation
+////////////////////////////////////////////////////////////////////////////////
+header
+  background navigationBackground
+  color navigationText
+  padding 5px 40px
+  font-weight bold
+  font-size bigText
+  border-bottom borderWidth solid navigationSeperator
+
+  a, a:hover, a:active, a:visited, a:link
+    display inline-block
+    margin 0 10px
+    text-decoration none
+    color inherit
+    cursor pointer
+
+////////////////////////////////////////////////////////////////////////////////
+// Ribbons
+////////////////////////////////////////////////////////////////////////////////
+.ribbon.focusText
+  grid-template-columns 20% auto
+
+.ribbon.evenLeft
+  grid-template-columns auto 35%
+
+.ribbon.even
+  grid-template-columns 35% auto
+
+.ribbon
+  display grid
+  min-height 200px
+  margin 0
+  text-align center
+  font-size text
+  grid-template-columns auto
+
+  a
+    text-decoration underline
+    color inherit
+
+  div
+    padding 75px 10px
+    background ribbonSectionBackground
+    color ribbonSectionText
+
+  .mainContent
+    background ribbonBackground
+    color ribbonText
+
+  .imagery
+    padding 0
+    overflow-y hidden
+
+    img
+      width 100%
+      max-height 100%
+      object-fit cover
+
+////////////////////////////////////////////////////////////////////////////////
+// Buttons
+////////////////////////////////////////////////////////////////////////////////
+
+.button, .button:active, .button:hover,
+input[type=submit], input[type=submit]:active, input[type=submit]:hover
+  background buttonBackground
+  color buttonText
+  text-decoration none
+  border none
+  padding 5px 25px
+  font text
+  cursor pointer
+
+////////////////////////////////////////////////////////////////////////////////
+// Inputs
+////////////////////////////////////////////////////////////////////////////////
+
+form
+  display inline-grid
+
+label
+  background inputBackground
+  color inputText
+  border borderWidth solid inputBorder
+  font-size text
+  display inline-grid
+  grid-template-columns auto 60%
+  padding-left 10px
+  margin-bottom 40px
+
+input[type=text], input[type=email], input[type=password]
+  background inputBackground
+  color inputText
+  font text
+  border none
+  border-left borderWidth solid inputBorder
+  padding 0 10px
+  margin-left 10px
