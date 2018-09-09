@@ -11,7 +11,7 @@ if (!$isLoggedIn)
 
     <div class="tabHolder">
 
-      <a class="tab" href="/">
+      <a class="tab" href="/game/browser">
         <span class="header">
           Game Browser
         </span>

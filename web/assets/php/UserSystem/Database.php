@@ -170,8 +170,8 @@ class Database extends Utils {
     $equals = substr($equals, 5);
     $sort = "";
     if (array_key_exists(2, $data))
-      $sort = "sort by " . $this->quoteIdent($data[2][0])
-        . ($data[2][1] == "desc" ? "desc" : "asc");
+      $sort = "order by " . $this->quoteIdent($data[2][0])
+        . ' ' . ($data[2][1] == "desc" ? "desc" : "asc");
     $stmt = $this->DATABASE->prepare("
       select * from ".$data[0]." where $equals $sort
     ");

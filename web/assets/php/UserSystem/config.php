@@ -17,7 +17,7 @@ along with Zbee/UserSystem.  If not, see <http://www.gnu.org/licenses/>.
 */
 
 #These constants are used to connect to your MySQL database.
-define("DB_PREFACE", "us_");                 #A preface to database table names
+define("DB_PREFACE", "");                    #A preface to database table names
 define("DB_LOCATION",$sqlConnection['host']);#The location of the database
 define("DB_USERNAME",$sqlConnection['user']);#The username for the database
 define("DB_PASSWORD",$sqlConnection['pass']);#The password for the database
@@ -27,7 +27,7 @@ define("DB_DATABASE",$sqlConnection['base']);#The name of the database
 define("SITENAME", "pop");                   #Name of your site (no symbols)
 define("URL_PREFACE", "https");              #If http or https is used
 define("DOMAIN_SIMPLE", "zbee.me");          #The root url of your website
-define("DOMAIN", "pop.zbee.me");            #The url holding the system
+define("DOMAIN", "pop.zbee.me");             #The url holding the system
 define("ACTIVATE_PG", "Example/activate");   #Activation page relative to DOMAIN
 define("RECOVERY_PG", "Example/recover");    #Recovery page relative to DOMAIN
 define("TWOSTEP_PG", "Example/twostep");     #Two step page relative to DOMAIN
