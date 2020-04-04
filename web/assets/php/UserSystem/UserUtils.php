@@ -146,7 +146,6 @@ class UserUtils extends Database {
             $thing = $ban["date"];
 
     if ($identifier !== false) {
-      $identifier = $this->sanitize($identifier, "n");
       $user = $this->dbSel(["users", ["id" => $identifier]])[0];
       if ($user != 1) return "user";
       $stmt = $this->dbSel(["ban", ["user" => $identifier]]);

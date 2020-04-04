@@ -106,7 +106,8 @@ class UserSystem extends UserUtils {
       $select = $this->dbSel(["users", ["id" => $identifier]]);
       if ($select[0] !== 1) return "user";
       if (md5($select[1]["salt"].substr($session, 0, 128)) == $tamper) {
-        if ($this->checkBan($identifier) === false) return true;
+        $ban = $this->checkBan($identifier);
+        if ($ban === false) return true;
         return "ban";
       } else {
         $this->dbDel(["userblobs", ["code"=>$session, "action"=>"session"]]);
@@ -272,23 +273,23 @@ class UserSystem extends UserUtils {
   /**
    * Logs out a selected userblob or group of user blobs
    * Example: $UserSystem->logOut($_COOKIE[$sitename], "Bob", true)
-   *
    * @access public
+   *
    * @param string $code
    * @param mixed int $user
-   * @param mixed $cursess
-   * @param mixed $all
+   * @param mixed  $curSess
+   * @param mixed  $all
+   *
    * @return boolean
    */
-  public function logOut ($code, $user = false, $cursess = false, $all = false) {
-    if ($user == false && $cursess == false) return 'needData';
+  public function logOut ($code, $user = false, $curSess = false, $all = false) {
+    if ($user == false && $curSess == false) return 'needData';
 
     $code = $this->sanitize($code, "s");
-    $user = $this->sanitize($user, "n");
-    $cursess = $this->sanitize($cursess, "b");
+    $curSess = $this->sanitize($curSess, "b");
     $all = $this->sanitize($all, "b");
 
-    if ($cursess === true) {
+    if ($curSess === true) {
       setcookie(
         SITENAME,
         null,

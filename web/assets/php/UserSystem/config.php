@@ -26,8 +26,8 @@ define("DB_DATABASE",$sqlConnection['base']);#The name of the database
 #These constants are used for URLs and cookies.
 define("SITENAME", "pop");                   #Name of your site (no symbols)
 define("URL_PREFACE", "https");              #If http or https is used
-define("DOMAIN_SIMPLE", "zbee.me");          #The root url of your website
-define("DOMAIN", "pop.zbee.me");             #The url holding the system
+define("DOMAIN_SIMPLE", "zbee.codes");       #The root url of your website
+define("DOMAIN", "pop.zbee.codes");          #The url holding the system
 define("ACTIVATE_PG", "Example/activate");   #Activation page relative to DOMAIN
 define("RECOVERY_PG", "Example/recover");    #Recovery page relative to DOMAIN
 define("TWOSTEP_PG", "Example/twostep");     #Two step page relative to DOMAIN
