@@ -15,36 +15,40 @@ require_once '/var/www/pop/web/assets/autoload.php';
 
 <div class="ribbon focusText">
   <div>
-    <h2><a href="rules">Rules</a></h2>
-    <h2><a href="about">About</a></h2>
+    <h2>How do I play?</h2>
   </div>
   <div class="mainContent">
-    This is an online, open source, multi-player,
-    reliable, free clone of Settlers of Catan as their
-    existing digitized versions are somehow "freemium"
-    and also unstable.
+    To begin playing, sign up for an account in the top right of the page,
+    then go to the game browser from the dashboard once logged in.
   </div>
 </div>
 
 <div class="ribbon evenLeft">
   <div class="mainContent">
-    The core game was developed with love over one
-    weekend by<br><a href="http://l.zbee.me/1Idh3VG">Ethan Henderson</a>
-    and designed by Corey Madrid.
+    This is an online, open source, multi-player, reliable, un-licensed, and
+    free clone of Settlers of Catan.
     <br>
-    You can even watch a video of it being developed on Twitch.
+    This exists as the existing digitized versions of the game are somehow
+    "freemium" and highly unstable for multi-player.
   </div>
+  <div>
+    <h2><a href="rules">Rules</a></h2>
+    <h2><a href="about">About</a></h2>
+  </div>
+</div>
+
+<div class="ribbon even">
   <div>
     <h2>
       <a href="https://l.zbee.me/2oQy4S4">
         Code Repository
       </a>
     </h2>
-    <h2>
-      <a href="https://l.zbee.me/2QdTftP">
-        Video of Development
-      </a>
-    </h2>
+  </div>
+  <div class="mainContent">
+    The core game was developed with love by
+    <a href="http://l.zbee.me/1Idh3VG">Ethan Henderson</a>,
+    and designed by Corey Madrid.
   </div>
 </div>
 

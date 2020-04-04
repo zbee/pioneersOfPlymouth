@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="58b85790-2765-49c0-9991-8624a2c3c207" name="zbee.codes" url="http://pop.zbee.codes">
+        <fileTransfer host="104.236.85.60" port="22" privateKey="C:\Users\Pwnjo\.ssh\id_rsa" rootFolder="/var/www/pop/" accessType="SFTP" keyPair="true">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" passiveMode="true" shareSSLContext="true" />
+          </advancedOptions>
+          <option name="port" value="22" />
+        </fileTransfer>
+      </webServer>
+    </option>
+  </component>
+</project>

@@ -18,7 +18,6 @@ $games = $UserSystem->dbSel(
 echo '<div class="ribbon"><div><table><tr>';
 echo '<th></th>';
 echo '<th>Owner</th>';
-echo '<th>Hosted By</th>';
 echo '<th>Invite Only</th>';
 echo '<th>Max Players</th>';
 echo '<th>Language</th>';
@@ -33,7 +32,7 @@ foreach ($games as $key => $game) {
   )[1];
   $owner = $ownerLoad['username'];
 
-  $inviteOnly = $game['inviteOnly'] == 1 ? '&#128505;' : '&#9744;';
+  $inviteOnly = $game['inviteOnly'] == 1 ? 'Yes' : 'No';
 
   $language = Locale::getDisplayLanguage($game['language'], 'en');
 
@@ -42,10 +41,8 @@ foreach ($games as $key => $game) {
   $row .= "<td>$owner</td>";
   $row .= "<td>$inviteOnly</td>";
   $row .= "<td>$game[maxPlayers]</td>";
-  $row .= "<td>$game[expansionsIncluded]</td>";
   $row .= "<td>$language</td>";
   $row .= "</tr>";
-  echo $row;
   echo $row;
 }
 
