@@ -1,0 +1,67 @@
+{
+    "_readme": [
+        "This file locks the dependencies of your project to a known state",
+        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
+        "This file is @generated automatically"
+    ],
+    "content-hash": "0fe24487dd319462a5f90748b657b83d",
+    "packages": [
+        {
+            "name": "adamb/database",
+            "version": "1.5.6",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/AdamB7586/pdo-dbal.git",
+                "reference": "673cc0d8ebc48baf74c8ca07d1272321d961f25a"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/AdamB7586/pdo-dbal/zipball/673cc0d8ebc48baf74c8ca07d1272321d961f25a",
+                "reference": "673cc0d8ebc48baf74c8ca07d1272321d961f25a",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.0"
+            },
+            "require-dev": {
+                "php-coveralls/php-coveralls": "^2.0",
+                "phpunit/phpunit": "^8.1"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "DBAL\\": "src/",
+                    "DBAL\\Modifiers\\": "src/Modifiers/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Adam Binnersley",
+                    "email": "abinnersley@gmail.com"
+                }
+            ],
+            "description": "A simple PDO Wrapper to connect to a database",
+            "homepage": "https://github.com/AdamB7586/pdo-dbal",
+            "keywords": [
+                "database",
+                "db",
+                "pdo",
+                "wrapper"
+            ],
+            "time": "2020-03-09T09:57:33+00:00"
+        }
+    ],
+    "packages-dev": [],
+    "aliases": [],
+    "minimum-stability": "stable",
+    "stability-flags": [],
+    "prefer-stable": false,
+    "prefer-lowest": false,
+    "platform": [],
+    "platform-dev": [],
+    "plugin-api-version": "1.1.0"
+}

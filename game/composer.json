@@ -1,0 +1,5 @@
+{
+  "require": {
+    "adamb/database": "1.5.6"
+  }
+}
