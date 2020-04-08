@@ -1,5 +1,5 @@
 <?php
 
-class pioneersOfPlymouth extends utilities {
+class pioneersOfPlymouth extends games {
 
 }
