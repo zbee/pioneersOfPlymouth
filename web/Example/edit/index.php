@@ -20,7 +20,7 @@ require_once "../../assets/autoload.php";
 require_once("../../assets/php/UserSystem/config.php");
 
 $verify = $UserSystem->verifySession();
-if ($verify !== true) $UserSystem->redirect301("../");
+if ($verify !== true) $UserSystem->redirect("../");
 $session = $UserSystem->session();
 
 $error = "";

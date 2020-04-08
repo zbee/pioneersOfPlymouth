@@ -2,7 +2,7 @@
 require_once '/var/www/pop/web/assets/autoload.php';
 
 if ($isLoggedIn)
-  $UserSystem->redirect301("/dashboard?alreadyLoggedIn");
+  $UserSystem->redirect("/user/logout?login?");
 
 $error = '';
 
@@ -16,7 +16,7 @@ if (
   $login = $UserSystem->logIn($user, $pass);
 
   if ($login === true)
-    $UserSystem->redirect301("/dashboard?loggedIn");
+    $UserSystem->redirect("/dashboard?loggedIn");
   else
     $error = $login;
 

@@ -22,7 +22,7 @@ require_once("../../assets/php/UserSystem/config.php");
 if (isset($_GET["blob"])) {
   $activate = $UserSystem->activateUser($_GET["blob"]);
   if ($activate === true) {
-    $UserSystem->redirect301("../login");
+    $UserSystem->redirect("../login");
   } else {
     echo "Please tell someone this happened:<br>";
     var_dump($activate);

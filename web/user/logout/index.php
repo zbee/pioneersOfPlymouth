@@ -6,7 +6,7 @@ if ($isLoggedIn) {
     $logout = $UserSystem->logOut(
       $_GET["specific"], $session["id"], false
     );
-    $UserSystem->redirect301("/user/manage?sessionClosed");
+    $UserSystem->redirect("/user/manage?sessionClosed");
   } elseif (isset($_GET["all"])) {
     $logout = $UserSystem->logOut(
       $_COOKIE[SITENAME],
@@ -15,16 +15,16 @@ if ($isLoggedIn) {
       true
     );
     if ($logout === true)
-      $UserSystem->redirect301("/user/login");
+      $UserSystem->redirect("/user/login");
   } else {
     $logout = $UserSystem->logOut(
       $_COOKIE[SITENAME], $session["id"], true
     );
-    $UserSystem->redirect301("/user/login");
+    $UserSystem->redirect("/user/login");
   }
 } else {
   $logout = $UserSystem->logOut(
     $_COOKIE[SITENAME], $session["id"], true
   );
-  $UserSystem->redirect301("/");
+  $UserSystem->redirect("/");
 }

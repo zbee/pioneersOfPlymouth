@@ -65,6 +65,7 @@ class Utils {
   */
   public function getIP () {
     $srcs = [
+      'HTTP_CF_CONNECTING_IP',
       'HTTP_CLIENT_IP',
       'HTTP_X_FORWARDED_FOR',
       'HTTP_X_FORWARDED',
@@ -105,15 +106,14 @@ class Utils {
   /**
   * Provides the proper headers to redirect a user, including a page-has-moved
   * flag.
-  * Example: $UserSystem->redirect301("http://example.com")
+  * Example: $UserSystem->redirect("http://example.com")
   *
   * @access public
   * @param string $url
   * @return boolean
   */
-  public function redirect301($url) {
+  public function redirect($url) {
     if (!headers_sent()) {
-      header("HTTP/1.1 301 Moved Permanently");
       header("Location: $url");
       return true;
     }

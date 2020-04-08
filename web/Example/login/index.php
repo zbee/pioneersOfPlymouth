@@ -20,12 +20,12 @@ require_once "../../assets/autoload.php";
 require_once("../../assets/php/UserSystem/config.php");
 
 $verify = $UserSystem->verifySession();
-if ($verify) $UserSystem->redirect301("../");
+if ($verify) $UserSystem->redirect("../");
 
 if (isset($_POST["u"])) {
   $login = $UserSystem->logIn($_POST["u"], $_POST["p"]);
   if ($login === true) {
-    $UserSystem->redirect301("../?loggedin");
+    $UserSystem->redirect("../?loggedin");
   } else {
     echo "Please tell someone this happened:<br>";
     var_dump($login);

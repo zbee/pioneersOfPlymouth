@@ -17,18 +17,18 @@ along with Zbee/UserSystem.  If not, see <http://www.gnu.org/licenses/>.
 */
 require_once("../header.php");
 
-if ($verify) $UserSystem->redirect301("../");
+if ($verify) $UserSystem->redirect("../");
 
 if (isset($_GET["blob"]) && isset($_POST["p"])) {
   $blob = $UserSystem->sanitize($_GET["blob"]);
   $UserSystem->recover($blob, $_POST["p"], $_POST["c"]);
-  $UserSystem->redirect301("../login/?recovered");
+  $UserSystem->redirect("../login/?recovered");
 }
 
 if (isset($_POST["e"])) {
   $email = $UserSystem->sanitize($_POST["e"], "e");
   $UserSystem->sendRecover($email);
-  $UserSystem->redirect301("../?recoverysent");
+  $UserSystem->redirect("../?recoverysent");
 }
 ?>
 
