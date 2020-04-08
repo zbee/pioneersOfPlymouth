@@ -6,9 +6,11 @@ require_once 'vendor/autoload.php';
 require_once 'config.inc';
 
 //Include game logic
+require_once 'core/utilities/database.inc';
+require_once 'core/utilities/utilities.inc';
 require_once 'core/core.inc';
-require_once 'play/play.inc';
-require_once 'connection/ajaxFeed/ajaxFeed.inc';
+require_once 'core/games/struct.inc';
+require_once 'core/games/browse.inc';
 
 //Generate the base POP object
 $pop = new pioneersOfPlymouth();
