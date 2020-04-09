@@ -9,9 +9,10 @@ require_once 'config.inc';
 require_once 'core/utilities/database.inc';
 require_once 'core/utilities/utilities.inc';
 require_once 'core/games/browse.inc';
+require_once 'core/games/load.inc';
 require_once 'core/games/games.inc';
 require_once 'core/core.inc';
-require_once 'structures/game.inc';
+require_once 'structures/lobby.inc';
 
 //Generate the base POP object
 $pop = new pioneersOfPlymouth();

@@ -1,3 +1,3 @@
 <?php
 
-class games extends browse {}
+class games extends load {}

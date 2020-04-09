@@ -4,14 +4,9 @@ require_once '/var/www/pop/web/assets/autoload.php';
 if (!$isLoggedIn)
   $UserSystem->redirect('/user/login?mustBeLoggedIn');
 
-$gameID = $_SERVER['REQUEST_URI'];
-$gameID = str_replace('/game/', '', $gameID);
-$gameID = (int) $gameID;
+$lobbyID = $_SERVER['REQUEST_URI'];
+$lobbyID = str_replace('/game/', '', $lobbyID);
+$pop->loadLobby($lobbyID);
 
-$gameLoad = $UserSystem->dbSel(['gameLobbies', ['id' => $gameID]]);
-
-if ($gameLoad[0] !== 1)
+if ($pop->lobbyLoaded !== true)
   $UserSystem->redirect('/dashboard?gameNonexistent');
-
-$game = $gameLoad[1];
-var_dump($game);
