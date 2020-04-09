@@ -2,26 +2,28 @@
 
 class browse extends utilities {
 
-  public function browseLobbies() {
+  /**
+   * Method to return a list of lobbies available for joining
+   * @return lobby[]
+   * @throws Exception for DateTime
+   */
+  public function browseLobbies(): array {
     $currentTimestamp = (new DateTime())->getTimestamp();
     $max_age = $currentTimestamp - 60 * 60 * BROWSER_LOBBY_AGE_RESTRICTION;
 
-    $games = $this->DATABASE->selectAll(
+    $lobbies = $this->DATABASE->selectAll(
       'gameLobbies',
       [ 'date' => [ '>', $max_age] ],
       null,
       [ 'name' => 'asc']
     );
 
-    foreach ($games as &$game) {
-      $game['ownerID'] = $game['owner'];
-      $game['owner'] = $this->DATABASE->select(
-        'users', ['id' => $game['owner']], [ 'username' ]
-      )['username'];
-      $game = new lobby($game);
+    foreach ($lobbies as &$lobby) {
+      $lobby = new lobby($lobby);
+      $lobby->setOwnerName($this);
     }
 
-    return $games;
+    return $lobbies;
   }
 
 }

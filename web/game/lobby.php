@@ -7,6 +7,7 @@ if (!$isLoggedIn)
 $lobbyID = $_SERVER['REQUEST_URI'];
 $lobbyID = str_replace('/game/', '', $lobbyID);
 $pop->loadLobby($lobbyID);
+var_dump($pop->getLobby());
 
 if ($pop->lobbyLoaded !== true)
   $UserSystem->redirect('/dashboard?gameNonexistent');
