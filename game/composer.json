@@ -1,5 +1,6 @@
 {
   "require": {
-    "adamb/database": "1.5.6"
+    "adamb/database": "1.5.6",
+    "ext-intl": "*"
   }
 }
