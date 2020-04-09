@@ -2,9 +2,9 @@
 
 class browse extends utilities {
 
-  public function browseGames() {
+  public function browseLobbies() {
     $currentTimestamp = (new DateTime())->getTimestamp();
-    $max_age = $currentTimestamp - 60 * 60 * BROWSER_AGE_RESTRICTION;
+    $max_age = $currentTimestamp - 60 * 60 * BROWSER_LOBBY_AGE_RESTRICTION;
 
     $games = $this->DATABASE->selectAll(
       'gameLobbies',
@@ -18,7 +18,7 @@ class browse extends utilities {
       $game['owner'] = $this->DATABASE->select(
         'users', ['id' => $game['owner']], [ 'username' ]
       )['username'];
-      $game = new game($game);
+      $game = new lobby($game);
     }
 
     return $games;

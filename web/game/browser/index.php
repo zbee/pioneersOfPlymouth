@@ -4,7 +4,7 @@ require_once '/var/www/pop/web/assets/autoload.php';
 if (!$isLoggedIn)
   $UserSystem->redirect('/user/login?mustBeLoggedIn');
 
-$games = $pop->browseGames();
+$lobbies = $pop->browseLobbies();
 
 echo '<div class="ribbon"><div><table><tr>';
 echo '<th></th>';
@@ -15,18 +15,18 @@ echo '<th>Language</th>';
 echo '</tr>';
 
 /**
- * @var game $game
+ * @var lobby $lobby
  */
-foreach ($games as $game) {
-  if (!is_object($game))
+foreach ($lobbies as $lobby) {
+  if (!is_object($lobby))
     continue;
 
-  $row = "<tr class='clickable-row' data-href='/game/$game->id'>";
-  $row .= "<td>$game->name</td>";
-  $row .= "<td>$game->owner</td>";
-  $row .= "<td>$game->inviteOnlyText</td>";
-  $row .= "<td>$game->maxPlayers</td>";
-  $row .= "<td>$game->language</td>";
+  $row = "<tr class='clickable-row' data-href='/game/$lobby->uuid'>";
+  $row .= "<td>$lobby->name</td>";
+  $row .= "<td>$lobby->owner</td>";
+  $row .= "<td>$lobby->inviteOnlyText</td>";
+  $row .= "<td>$lobby->maxPlayers</td>";
+  $row .= "<td>$lobby->language</td>";
   $row .= "</tr>";
   echo $row;
 }
