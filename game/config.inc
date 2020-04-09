@@ -14,7 +14,7 @@ if (!defined('DB_DATABASE')) define("DB_DATABASE",$sqlConnection['base']);
 
 //region Games
 //Game browser maximum age
-define("BROWSER_AGE_RESTRICTION", 24);
+define("BROWSER_LOBBY_AGE_RESTRICTION", 99999999);
 //endregion
 //endregion
 
