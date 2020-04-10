@@ -1,4 +1,4 @@
-#Out of the box install
+# Out of the box install
 Here are the basic setup items which all need to be done, which is probably
 exactly what you need if you already have an Ubuntu PHP box, which you need to
 upgrade to PHP 7.4, install missing extensions, and get services up. The only
