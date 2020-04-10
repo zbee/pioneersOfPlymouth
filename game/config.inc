@@ -1,5 +1,12 @@
 <?php
 
+//region Connection
+//region ajaxFeed
+define('CONNECTION_KEEP_ALIVE_PERIOD', 30); //seconds
+define('CONNECTION_MAX_AGE_TIL_KILL', 99999999999); //minutes
+//endregion
+//endregion
+
 //region Core
 //region Utilities
 //The location of the database host

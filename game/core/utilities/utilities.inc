@@ -2,14 +2,7 @@
 
 class utilities extends databaseAbstraction {
 
-  /**
-   * @var string $userID binary of user id
-   */
-  public string $userID;
-  /**
-   * @var string $userUUID UUID of user id
-   */
-  public string $userUUID;
+  public user $user;
 
   public function getUUID(string $binary): string {
     return preg_replace(
@@ -29,8 +22,7 @@ class utilities extends databaseAbstraction {
    * @param string $userID Binary of user ID
    */
   public function setUser(string $userID): void {
-    $this->userID   = $userID;
-    $this->userUUID = $this->getUUID($userID);
+    $this->user = new user($userID, $this);
   }
 
   public function redirect(string $url): bool {

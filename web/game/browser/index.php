@@ -23,7 +23,7 @@ foreach ($lobbies as $lobby) {
 
   $row = "<tr class='clickable-row' data-href='$lobby->joinURL'>";
   $row .= "<td>$lobby->name</td>";
-  $row .= "<td>$lobby->owner</td>";
+  $row .= "<td>{$lobby->owner->username}</td>";
   $row .= "<td>$lobby->inviteOnlyText</td>";
   $row .= "<td>$lobby->maxPlayers</td>";
   $row .= "<td>$lobby->language</td>";
