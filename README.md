@@ -8,6 +8,9 @@ modify it how you please, you can always contact me from my
 [profile](https://github.com/zbee/) or [keybase](https://keybase.io/zbee).
 I will try to make the setup of your own instance of Pioneers of Plymouth
 as simple as possible.
+This does use a modified version of
+[zbee/UserSystem](https://github.com/zbee/usersystem) which is licensed under
+GPLv3.
 
 Please read the [installation document](INSTALL.md) if you want to spin up your
 own instance. I want to also switch my systems over to Heroku, and then offer
