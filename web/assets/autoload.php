@@ -13,3 +13,6 @@ if (!isset($include_header) || $include_header === true)
   require_once '/var/www/pop/web/assets/php/header.php';
 
 require_once '/var/www/pop/game/autoload.php';
+
+if ($isLoggedIn)
+  $pop->setUser($session['id']);

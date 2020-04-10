@@ -21,7 +21,7 @@ foreach ($lobbies as $lobby) {
   if (!is_object($lobby))
     continue;
 
-  $row = "<tr class='clickable-row' data-href='/game/$lobby->uuid'>";
+  $row = "<tr class='clickable-row' data-href='$lobby->joinURL'>";
   $row .= "<td>$lobby->name</td>";
   $row .= "<td>$lobby->owner</td>";
   $row .= "<td>$lobby->inviteOnlyText</td>";

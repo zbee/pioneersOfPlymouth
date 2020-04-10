@@ -9,13 +9,14 @@ class browse extends utilities {
    */
   public function browseLobbies(): array {
     $currentTimestamp = (new DateTime())->getTimestamp();
-    $max_age = $currentTimestamp - 60 * 60 * BROWSER_LOBBY_AGE_RESTRICTION;
+    $age_restriction  = 60 * 60 * BROWSER_LOBBY_AGE_RESTRICTION;
+    $max_age          = $currentTimestamp - $age_restriction;
 
     $lobbies = $this->DATABASE->selectAll(
       'gameLobbies',
-      [ 'date' => [ '>', $max_age] ],
+      ['date' => ['>', $max_age]],
       null,
-      [ 'name' => 'asc']
+      ['name' => 'asc']
     );
 
     foreach ($lobbies as &$lobby) {
