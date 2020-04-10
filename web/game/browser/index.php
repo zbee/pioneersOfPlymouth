@@ -31,7 +31,7 @@ foreach ($lobbies as $lobby) {
   echo $row;
 }
 
-echo '</table></div>';
+echo '</table></div></div>';
 ?>
 
 <script>
