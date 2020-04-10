@@ -28,7 +28,7 @@ class load extends browse {
       $this->lobbyLoaded = false;
     else {
       $this->lobby = new lobby($lobby);
-      $this->lobby->setOwnerName($this);
+      $this->lobby->loadOwner($this);
       $this->lobbyLoaded = true;
     }
   }
@@ -38,7 +38,7 @@ class load extends browse {
     $this->DATABASE->insert(
       'connections',
       [
-        'userID'         => $this->userID,
+        'userID'         => $this->user->id,
         'connectionType' => CONNECTION_TYPE_LOBBY,
         'connectionID'   => $this->lobbyID,
         'lastPing'       => $currentTimestamp,
@@ -49,7 +49,7 @@ class load extends browse {
 
   private function inLobby(string $user = 'checkClass'): bool {
     if ($user == 'checkClass')
-      $user = $this->userID;
+      $user = $this->user->id;
 
     $checkLobbyStatus = $this->DATABASE->count(
       'connections',
