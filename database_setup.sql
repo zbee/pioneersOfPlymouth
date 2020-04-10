@@ -1,4 +1,4 @@
-create schema pop collate latin1_swedish_ci;
+create schema pop collate utf8_bin;
 
 create table users
 (
@@ -22,7 +22,8 @@ create table users
     lastLoggedIn int(20) default 0 not null,
     oldLastLoggedIn int(20) default 0 not null,
     ip varchar(60) default '' not null
-);
+)
+    charset=latin1;
 
 create table ban
 (
@@ -37,7 +38,8 @@ create table ban
     constraint ban_users_id_fk
         foreign key (user) references users (id)
             on update cascade on delete cascade
-);
+)
+    charset=latin1;
 
 create table connections
 (
@@ -51,7 +53,7 @@ create table connections
         foreign key (userID) references users (id)
             on update cascade on delete cascade
 )
-    comment 'Table containing users connected to games and lobbies';
+    comment 'Table containing users connected to games and lobbies' charset=latin1;
 
 alter table connections
     add primary key (userID);
@@ -74,7 +76,7 @@ create table gameLobbies
         foreign key (owner) references users (id)
             on update cascade on delete cascade
 )
-    comment 'List of games actively being played or open for joining from the browser';
+    comment 'List of games actively being played or open for joining from the browser' charset=latin1;
 
 create index gameLobbies_idx_1
     on gameLobbies (name);
@@ -108,7 +110,8 @@ create table userblobs
     constraint userblobs_users_id_fk
         foreign key (user) references users (id)
             on update cascade on delete cascade
-);
+)
+    charset=latin1;
 
 create definer = admin@localhost trigger before_insert_uuid_the_user
     before insert
