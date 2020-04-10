@@ -10,4 +10,6 @@ I will try to make the setup of your own instance of Pioneers of Plymouth
 as simple as possible.
 
 Please read the [installation document](INSTALL.md) if you want to spin up your
-own instance.
+own instance. I want to also switch my systems over to Heroku, and then offer
+a [Heroku button](https://elements.heroku.com/buttons) to instantly spin up an
+instance.
