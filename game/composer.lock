@@ -4,20 +4,20 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "0fe24487dd319462a5f90748b657b83d",
+    "content-hash": "218fe1778c8f640c515b8b398623afa4",
     "packages": [
         {
             "name": "adamb/database",
-            "version": "1.5.6",
+            "version": "1.5.7",
             "source": {
                 "type": "git",
                 "url": "https://github.com/AdamB7586/pdo-dbal.git",
-                "reference": "673cc0d8ebc48baf74c8ca07d1272321d961f25a"
+                "reference": "fabe39a8a48e94252e6abeb60ecb47ef252fd13b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/AdamB7586/pdo-dbal/zipball/673cc0d8ebc48baf74c8ca07d1272321d961f25a",
-                "reference": "673cc0d8ebc48baf74c8ca07d1272321d961f25a",
+                "url": "https://api.github.com/repos/AdamB7586/pdo-dbal/zipball/fabe39a8a48e94252e6abeb60ecb47ef252fd13b",
+                "reference": "fabe39a8a48e94252e6abeb60ecb47ef252fd13b",
                 "shasum": ""
             },
             "require": {
@@ -52,7 +52,7 @@
                 "pdo",
                 "wrapper"
             ],
-            "time": "2020-03-09T09:57:33+00:00"
+            "time": "2020-04-09T09:52:15+00:00"
         }
     ],
     "packages-dev": [],
@@ -61,7 +61,9 @@
     "stability-flags": [],
     "prefer-stable": false,
     "prefer-lowest": false,
-    "platform": [],
+    "platform": {
+        "ext-intl": "*"
+    },
     "platform-dev": [],
     "plugin-api-version": "1.1.0"
 }
