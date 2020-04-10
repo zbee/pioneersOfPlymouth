@@ -80,3 +80,19 @@ the DDL to set each table to be InnoDB manually.
 This is required as foreign key constraints are in use; you could also remove
 the foreign keys and skip this, but if you use the ajaxFeed connection mechanism
 you will notice a significant reduction in performance in game-play.
+
+And finally there's one required file which is not included in the repository
+necessary for configuration: `/keys.php`. This file should be at the root, next
+to the README, and is structured like so:
+
+```
+<?php
+$sqlConnection = [
+  'host' => 'hostname for database',
+  'user' => 'username',
+  'pass' => 'password',
+  'base' => 'database name'
+];
+```
+
+These will be switched to environment variables, but not until later.
