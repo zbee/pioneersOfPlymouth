@@ -77,4 +77,6 @@ When you setup your Pioneers of Plymouth database in your MySQL
 database, you can use [the DDL](database_setup.sql) to generate the
 tables. However, make sure the default engine is set to InnoDB, or alter
 the DDL to set each table to be InnoDB manually.
-This is required as foreign key constraints are in use.
+This is required as foreign key constraints are in use; you could also remove
+the foreign keys and skip this, but if you use the ajaxFeed connection mechanism
+you will notice a significant reduction in performance in game-play.
