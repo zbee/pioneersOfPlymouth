@@ -22,6 +22,10 @@ $ sudo apt install php7.4-{bcmath,bz2,cgi,cli,common,dba,dev,enchant,fpm,gd,gmp,
 $ sudo a2enmod php7.4
 ```
 
+The additional php7.4-[packages] are what I needed to run Pioneers of Plymouth
+as well as other software - you could reduce this list, but this will definitely 
+give you a solution.
+
 If you already had PHP then you'll need to disable your other version, replace
 the Xs with what your version was:
 
@@ -35,10 +39,6 @@ already had another version of PHP installed:
 ```
 $ sudo cp /etc/php/X.X/apache2/php.ini /etc/php/7.4/apache2/php.ini
 ```
-
-The additional php7.4-[packages] are what I needed to run Pioneers of Plymouth
-as well as other software - you could reduce this list, but this will definitely 
-give you a solution.
 
 The next installation you'll need is memcache, which can be installed similarly:
 
