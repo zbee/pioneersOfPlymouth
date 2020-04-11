@@ -46,7 +46,7 @@ require_once '/var/www/pop/web/assets/autoload.php';
     </h2>
   </div>
   <div class="mainContent">
-    The core game was developed with love by
+    The game engine and interface was developed with love by
     <a href="http://l.zbee.me/1Idh3VG">Ethan Henderson</a>,
     and designed by Corey Madrid.
   </div>
