@@ -19,29 +19,58 @@ $lobby = $pop->getLobby();
 $lobby->loadPlayers($pop);
 ?>
 
-<div class="ribbon balance" id="title">
+<div class="ribbon balance small" id="title">
   <div class="mainContent"><h2><?= $lobby->name ?></h2></div>
   <div>by <a href="#"><?= $lobby->owner->username ?></a></div>
 </div>
 <div class="ribbon evenLeft small" id="basic_info">
-  <div>
+  <div class="smallText">
     Invite Only: <?= $lobby->inviteOnlyText ?>
     &nbsp; &nbsp; - &nbsp; &nbsp;
     Language: <?= $lobby->language ?>
   </div>
-  <div>
+  <div class="smallText">
     Lobby ID:
     <small><?= $lobby->uuid ?></small>
     <sup><a onclick="copyToClipboard('<?= $lobby->uuid ?>')">(copy)</a></sup>
   </div>
 </div>
-<div class="ribbon even" id="players_settings">
+<div class="ribbon even small" id="players_settings">
   <div>
     <?php foreach ($lobby->players as $player): ?>
       <?= $player->username ?><br>
     <?php endforeach; ?>
   </div>
-  <div class="mainContent"></div>
+  <div class="mainContent">
+    <span class="bigText">Map Style</span>: <a href="#">Original</a>
+    &nbsp; &nbsp; - &nbsp; &nbsp;
+    <span class="bigText">Scenario</span>: <a href="#">None</a>
+    <br>
+    <span class="bigText">Trade Rules</span>: <a href="#">Standard</a>
+    &nbsp; &nbsp; - &nbsp; &nbsp;
+    <span class="bigText">Robber Occurrence</span>: <a href="#">Standard</a>
+    <br>
+    <span class="bigText">Tile Set</span>: <a href="#">Designed</a>
+    &nbsp; &nbsp; - &nbsp; &nbsp;
+    <span class="bigText">Board Design</span>: <a href="#">Designed</a>
+    <br>
+    <a href="#" class="text">Edit Game Settings</a>
+  </div>
+</div>
+<div class="ribbon focusText">
+  <div class="mainContent">
+    <h2><a href="#">Start Game!</a></h2>
+  </div>
+  <div class="chat">
+    <span id="gameChat">
+      Welcome to the lobby!
+    </span>
+    <label>
+      <?= $pop->user->username ?>
+      <input type="text" id="chatBox" placeholder="Type a message" />
+      <a href="#">Send!</a>
+    </label>
+  </div>
 </div>
 
 <script>

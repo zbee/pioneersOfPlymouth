@@ -125,7 +125,7 @@ header
   color navigationText
   padding 5px 40px
   font-weight bold
-  font-size bigText
+  font-size text
   border-bottom borderWidth solid navigationSeperator
 
   a, a:hover, a:active, a:visited, a:link
@@ -238,7 +238,7 @@ label
   border solid inputBorder
   font-size text
   display inline-grid
-  grid-template-columns auto 60%
+  grid-template-columns auto 70%
   padding-left 10px
   margin-bottom 40px
 
@@ -250,6 +250,31 @@ input[type=text], input[type=email], input[type=password]
   border-left borderWidth solid inputBorder
   padding 0 10px
   margin-left 10px
+
+div.chat
+  display grid
+  grid-template-rows 70% auto
+  height 200px
+  padding 25px 10px
+
+  span
+    font smallText
+    overflow-y scroll
+    overflow-x hidden
+    line-height normal
+    text-align left
+    padding 25px 10px
+
+  label
+    grid-template-columns auto 60% auto
+    font smallText
+    display grid
+    margin 0 15%
+
+    input
+      border-right borderWidth solid inputBorder
+      font smallText
+      padding 0 5px
 
 ////////////////////////////////////////////////////////////////////////////////
 // Data tabs
