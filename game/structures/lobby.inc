@@ -21,6 +21,7 @@ class lobby extends pioneersOfPlymouth {
    * @var null|user[] List of players connected to lobby
    */
   public ?array    $players;
+  public int       $currentPlayers;
 
   public function __construct(array $lobby) {
     $this->id        = (string)$lobby['lobbyID'];
@@ -94,6 +95,8 @@ class lobby extends pioneersOfPlymouth {
         continue;
       $this->players[] = new user($player['userID'], $pop);
     }
+
+    $this->currentPlayers = count($this->players);
   }
 
   /**

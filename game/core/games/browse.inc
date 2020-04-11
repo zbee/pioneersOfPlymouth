@@ -22,6 +22,7 @@ class browse extends utilities {
     foreach ($lobbies as &$lobby) {
       $lobby = new lobby($lobby);
       $lobby->loadOwner($this);
+      $lobby->loadPlayers($this);
     }
 
     return $lobbies;
