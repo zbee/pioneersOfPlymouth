@@ -29,7 +29,7 @@ if (!$isLoggedIn)
 
       <a class="tab">
         <span class="header">
-          Statistics
+          Your Statistics
         </span>
         <div class="content">
           <div>
@@ -47,10 +47,40 @@ if (!$isLoggedIn)
         </span>
         <div class="content">
           <div>
-            131
+            2
           </div>
           <div>
-            Games Open
+            Companions Online
+          </div>
+        </div>
+      </a>
+
+      <div class="deadSpace"></div>
+
+      <a class="tab">
+        <span class="header">
+          Leader Board
+        </span>
+        <div class="content">
+          <div>
+            #475
+          </div>
+          <div>
+            Position
+          </div>
+        </div>
+      </a>
+
+      <a class="tab">
+        <span class="header">
+          Your History
+        </span>
+        <div class="content">
+          <div>
+            4
+          </div>
+          <div>
+            Games Finished
           </div>
         </div>
       </a>
@@ -63,10 +93,10 @@ if (!$isLoggedIn)
         </span>
         <div class="content">
           <div>
-            S
+            832d
           </div>
           <div>
-            Skill Rank
+            of Membership
           </div>
         </div>
       </a>
